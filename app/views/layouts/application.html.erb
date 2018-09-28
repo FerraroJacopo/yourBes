@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Y</title>
+
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+
+    
+    
+  </head>
+
+  <body>
+    
+
+    <% if user_signed_in? %>
+  <%= link_to "Modifica Profilo", edit_user_registration_path %> |
+  <%= link_to "Esci", destroy_user_session_path, method: :delete  %> |
+  <% if current_user.admin%>
+     <%= link_to "Admin", 'admin_page#new' %>
+<% end %>
+<% else %>
+  <%= link_to "Registrati", new_user_registration_path  %> |
+  <%= link_to "Accedi", new_user_session_path  %>
+<% end %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
