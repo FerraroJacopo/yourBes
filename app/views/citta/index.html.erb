@@ -1,0 +1,21 @@
+<h1> Lista città </h1>
+
+<table border=1 width="20%" >
+	<thead>
+		<th>Città</th> 
+	</thead>
+	
+	<tbody>
+		<% @citta.each do |c|  %>
+			<tr>
+				<td>
+					<%= link_to c.nomecity, 
+					  :controller => "locali", 
+					  :action => "index", 
+					  :citta => c.nomecity %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>	

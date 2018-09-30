@@ -1,0 +1,25 @@
+<h1>Lista locali</h1>
+
+<%= @citta %>
+
+<%= form_tag locali_index_url, :method => 'get' do %>
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Ricerca" %>
+<% end %>
+
+<table border=1 width="20%" >
+	<thead>
+		<th>Nome Locale</th> 
+	</thead>
+	
+	<tbody>
+		<% @locale.each do |l|  %>
+			<tr>
+				<td>
+					<%= link_to l.nlocale, locali_path(id: l.id), :action => "show" %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>

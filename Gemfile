@@ -12,6 +12,8 @@ gem 'figaro'
 gem 'jquery-ui-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem "turnout"
+gem 'google_maps_service'
+gem 'json'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'

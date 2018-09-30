@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_27_102136) do
+ActiveRecord::Schema.define(version: 2018_09_30_160023) do
+
+  create_table "cities", force: :cascade do |t|
+    t.string "nomecity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locales", force: :cascade do |t|
+    t.string "nlocale"
+    t.string "indirizzo"
+    t.string "backline"
+    t.integer "pagamento"
+    t.integer "capacita"
+    t.string "genere"
+    t.string "telefono"
+    t.string "citta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 # Could not dump table "users" because of following StandardError
 #   Unknown type 'bool' for column 'admin'

@@ -14,6 +14,7 @@ end
 def up
 	po=params[:bo]
 
+
 	if User.find_by(username: po).admin?
 		User.find_by(username: po).update_attribute(:admin, false)
 

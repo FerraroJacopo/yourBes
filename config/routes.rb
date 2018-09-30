@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   #devise_for :users, controllers: { registrations: 'users/registrations' }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+  resources :locali
+  resources :citta
+
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',registrations: 'users/registrations' }
 
  get '/home', to: 'home#new'
@@ -13,7 +16,7 @@ Rails.application.routes.draw do
 
  devise_scope :user do
   authenticated :user do
-    root 'home#new', as: :authenticated_root
+    root 'citta#index', as: :authenticated_root
   end
 
   unauthenticated do
