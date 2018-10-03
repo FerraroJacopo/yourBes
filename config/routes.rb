@@ -8,10 +8,12 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks',registrations: 'users/registrations' }
 
- get '/home', to: 'home#new'
  get '/admin_page', to: 'admin_page#new' 
  get '/users/admin_page', to: 'admin_page#new' 
  put 'admin_page/up', to: 'admin_page#up'
+ put 'admin_page/loc', to: 'admin_page#loc'
+ put 'admin_page/suspend', to: 'admin_page#suspend'
+ get '/profilo', to: 'profilo#index'
 
 
  devise_scope :user do

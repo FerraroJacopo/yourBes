@@ -1,4 +1,5 @@
 class LocaliController < ApplicationController
+	
 	def index
 		@citta = params[:citta]
 		if @citta.nil?
@@ -10,6 +11,8 @@ class LocaliController < ApplicationController
 	
 	def new
 		@locale = Locale.new
+		@l=Locale.pluck(:nlocale)
+		@c=City.pluck(:nomecity)
 	end
 
 	def show

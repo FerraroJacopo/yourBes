@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_160023) do
+ActiveRecord::Schema.define(version: 2018_10_03_172139) do
 
   create_table "cities", force: :cascade do |t|
     t.string "nomecity"

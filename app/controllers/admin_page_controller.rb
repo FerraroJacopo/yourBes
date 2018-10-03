@@ -4,11 +4,10 @@ class AdminPageController < ApplicationController
 def new
 	@users=User.all
 	@user=User.new
-	arr = Array.new
+	@local=Locale.new 
 	@u = User.pluck(:username)
+	@l= Locale.pluck(:nlocale)
 	
-
-	#User.find_by(nome: 'Giacopo').update_attribute(:admin, false)
 end 
 
 def up
@@ -23,6 +22,15 @@ def up
 	end 
 	redirect_to '/admin_page'
 end
+
+def loc
+	
+	po2=params[:bo_l]
+	Locale.find_by(nlocale: po2).destroy
+	 
+
+	redirect_to '/admin_page'
+end 
 
 
 end 
