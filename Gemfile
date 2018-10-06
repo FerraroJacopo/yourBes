@@ -15,6 +15,8 @@ gem "turnout"
 gem 'google_maps_service'
 gem 'json'
 
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
@@ -51,6 +53,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'rack_session_access'
+  gem 'database_cleaner'  # to clean Cucumber's test database between runs
+  gem 'launchy' # debbuging aim for user stories
+  gem 'factory_bot_rails'
+  gem 'cucumber-rails', require: false
+ 
+
 end
 
 group :development do

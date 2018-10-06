@@ -1,7 +1,7 @@
 class CittaController < ApplicationController
  	
    def index
-  		@citta = City.select(:nomecity) 
+  		@citta = City.all 
   	end
 
   	def new
@@ -19,7 +19,7 @@ class CittaController < ApplicationController
   	end
 
   	def show
-  		@citta = City.find(params[:id]).nomecity
+  		@citta = City.find(params[:id])
   		redirect_to controller: 'locali', action: 'index', citta: @citta
   	end
 

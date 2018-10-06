@@ -38,84 +38,78 @@
 <% end %>
 
 <script>
-
  $( "form" ).submit(function( event ) {
  	var l = $("#foo").data("lat");
-
     if(l.includes(document.getElementById("nl").value)==false) {
          return; }
      else {
 		event.preventDefault();
-		alert("Locale già esistente"); }
-
+		alert("Locale già esistente");
+		window.location.reload(); }
  });
-
-
  $( "form" ).submit(function( event ) {
  	
  	var c = $("#bomba").data("lat");
  	
-
 	if(c.includes(document.getElementById("city").value)==true) {
          return; }
      else {
 		event.preventDefault();
-		alert("Devi prima registrare questa città"); }	
+		alert("Devi prima registrare questa città"); 
+		window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("c").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("La capacità non può essere vuota"); }	
+		alert("La capacità non può essere vuota"); 
+		window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("i").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("L'indirizzo non può essere vuoto"); }	
+		alert("L'indirizzo non può essere vuoto"); 
+	window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("b").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("La backline non può essere vuota"); }	
+		alert("La backline non può essere vuota"); 
+	window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("p").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("Il pagamento non può essere vuota"); }	
+		alert("Il pagamento non può essere vuota"); 
+	window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("g").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("Il genere non può essere vuota"); }	
+		alert("Il genere non può essere vuota"); 
+	window.location.reload();}	
  });
-
  $( "form" ).submit(function( event ) {
  	
  	if(document.getElementById("t").value!="") {
          return; }
      else {
 		event.preventDefault();
-		alert("La telefono non può essere vuota"); }	
+		alert("La telefono non può essere vuota"); 
+	window.location.reload();}	
  });
-
-
 </script>

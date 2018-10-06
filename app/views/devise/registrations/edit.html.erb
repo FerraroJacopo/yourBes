@@ -1,4 +1,9 @@
-<%= link_to "Torna alla home", '/citta#index' %> 
+<%= link_to "Torna alla home", '/citta#index' %> |
+<% if current_user.admin%>
+     <%= link_to "Admin", 'admin_page#new' %> |
+<% end %>
+<%= link_to "Esci", destroy_user_session_path, method: :delete  %>
+
 
 <div class="a">
 <h1> <%= current_user.nome%> <h1><h1> <%= current_user.cognome %> <h1>

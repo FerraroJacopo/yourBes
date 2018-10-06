@@ -1,6 +1,12 @@
 <% if user_signed_in? %>
-  <%= link_to "Profilo", edit_user_registration_path %> 
-  <% end %>
+  <%= link_to "Profilo", edit_user_registration_path %> |
+  
+  <%= link_to "Esci", destroy_user_session_path, method: :delete  %>
+<% else %>
+  <%= link_to "Registrati", new_user_registration_path  %> |
+  <%= link_to "Accedi", new_user_session_path  %>
+<% end %>
+ 
 
 <h1> Lista città </h1>
 
